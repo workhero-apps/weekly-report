@@ -2,7 +2,9 @@
 
 A weekly, Dan Wang–style essay report on AI & tech, generated automatically every **Sunday 13:00 Australia/Sydney** by a Hermes agent.
 
-Each edition synthesizes the past 7 days from six YouTube channels (transcribed) and four newsrooms, and is written in a strict **facts-first** format:
+The agent researches original sources directly: YouTube transcripts, newsroom/article pages, and selected X/Twitter profile feeds.
+
+Each edition synthesizes the past 7 days from six YouTube channels (transcribed), four newsrooms, and selected X/Twitter profiles, and is written in a strict **facts-first** format:
 
 1. **Part I — Features & tools** *(facts)* — what actually shipped: products, specs, benchmarks, prices.
 2. **Part II — Economics** *(facts)* — filings, raises, stated revenue/valuation/compute numbers.
@@ -24,3 +26,4 @@ Each Sunday the Hermes agent researches the week, builds a new edition object, *
 
 YouTube: @allin, @GregIsenberg, @a16z, @TechWithTim, @rileybrownai, @DwarkeshPatel.
 Newsrooms: openai.com/news, anthropic.com/news, hermes-ai.net/news, blog.google AI.
+X/Twitter: @levie, @rileybrown.

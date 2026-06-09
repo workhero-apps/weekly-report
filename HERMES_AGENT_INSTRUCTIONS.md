@@ -14,6 +14,8 @@ This document is the standing prompt/skill for the Hermes agent that generates *
 
 ## 1. Sources
 
+The agent must collect from the original sources directly. Do not rely on secondary summaries or memory for source content: visit/fetch each newsroom page, each article, each YouTube transcript, and each X profile feed within the weekly window.
+
 ### YouTube channels (use the YouTube transcript tooling)
 Pull the last 7 days of uploads from each, then fetch transcripts:
 
@@ -39,6 +41,18 @@ Process:
 1. Try a normal web fetch first. If it returns an empty shell / "enable JavaScript" / nav-only boilerplate, the page is client-rendered — **re-fetch with a JS-rendering browser tool** (headless browser / browser skill) and read the rendered text.
 2. Keep only items **dated within the window**. Open the individual article to get concrete details (model names, numbers, partners).
 3. If a source has nothing in the window, **say so explicitly** in the footnote (e.g. hermes-ai.net is a single-product release log and is often quiet). Do not fabricate filler.
+
+### X / Twitter profiles (use twitterapi.io tooling)
+Pull the last 7 days of posts from each profile, then filter and cite the original tweet URLs:
+
+- https://x.com/levie
+- https://x.com/rileybrown
+
+Process:
+1. Use the configured `TWITTERAPI_KEY` / twitterapi.io access already used by the X Daily Digest automation. The proven endpoint is `GET https://api.twitterapi.io/twitter/user/last_tweets?userName=<handle>` with header `x-api-key: $TWITTERAPI_KEY`.
+2. Filter returned `data.tweets` client-side to posts whose `createdAt` falls inside the 7-day window. Exclude replies unless they contain a substantive standalone idea; include quote tweets only if the author adds meaningful commentary.
+3. Treat these as **opinion/source commentary**, not newsroom facts, unless the tweet links to or announces a verifiable release. Attribute ideas in Part III to the author (e.g. Aaron Levie, Riley Brown) and cite the tweet URL in the Sources block.
+4. If a profile has no relevant posts in the window, note that in the footnote. Do not backfill old tweets.
 
 ---
 
@@ -90,9 +104,9 @@ Edition object shape (must match exactly):
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
     dek:      "…",                     // italic standfirst
-    byline:   "A weekly synthesis of six podcasts and four newsrooms. Reading time ~N min.",
+    byline:   "A weekly synthesis of six podcasts, four newsrooms, and selected X profiles. Reading time ~N min.",
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
-    sources:  "…HTML…"                 // <h3> Videos / Newsrooms lists of <a> links + footnote
+    sources:  "…HTML…"                 // <h3> Videos / Newsrooms / X profiles lists of <a> links + footnote
   },
   pt: { /* same keys, Portuguese */ }
 }
@@ -119,7 +133,7 @@ Use these exact classes so the CSS styles render correctly:
 Labels: `<span class="label-fact">facts</span>` on Part I & II names; `<span class="label-op">opinion</span>` on Part III name. Use `<strong>` for key numbers, `<em class="term">` for coined terms. Escape `&` as `&amp;`.
 
 ### Sources block
-Two `<h3>` lists — **Videos · YouTube transcripts (last 7 days)** and **Newsrooms** — each `<li><a href="URL">Title</a></li>`. End with a `<p class="footnote">` noting any source that was empty in the window.
+Three `<h3>` lists — **Videos · YouTube transcripts (last 7 days)**, **Newsrooms**, and **X / Twitter profiles** — each `<li><a href="URL">Title</a></li>`. End with a `<p class="footnote">` noting any source that was empty in the window.
 
 ### Steps each run
 1. Read `index.html`, locate `const EDITIONS = [`.
