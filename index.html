@@ -10,19 +10,19 @@
     --ink:#1a1a1a;
     --muted:#6b6b63;
     --rule:#e3e0d6;
-    --link:#3a3a8c;
-    --accent:#8a2b2b;
+    --link:#c4633a;
+    --accent:#c4633a;
     --surface:#ffffff;
     --maxw:680px;
   }
   html[data-theme="dark"]{
-    --bg:#15140f;
-    --ink:#e9e6dd;
-    --muted:#9c988c;
-    --rule:#33312a;
-    --link:#a6adea;
-    --accent:#dd9a9a;
-    --surface:#201e18;
+    --bg:#181817;
+    --ink:#e8e6dc;
+    --muted:#9b9890;
+    --rule:#34332f;
+    --link:#d97757;
+    --accent:#d97757;
+    --surface:#262624;
   }
   html{transition:background-color .25s ease,color .25s ease}
   *{box-sizing:border-box}
@@ -87,7 +87,7 @@
     padding:5px 11px;
     cursor:pointer;
   }
-  .lang button.active{background:var(--ink);color:var(--bg)}
+  .lang button.active{background:var(--accent);color:#fff}
   .header-right{display:flex;align-items:center;gap:10px}
   .iconbtn{
     display:inline-flex;align-items:center;justify-content:center;
@@ -97,10 +97,10 @@
     transition:color .15s ease,background-color .15s ease;
   }
   .iconbtn:hover{color:var(--ink)}
-  html[data-theme="dark"] .label-fact{background:#1e2a1a;color:#bcd6aa}
-  html[data-theme="dark"] .label-op{background:#2e1c1c;color:#e8b6b6}
+  html[data-theme="dark"] .label-fact{background:#2b2a27;color:#b9b6aa}
+  html[data-theme="dark"] .label-op{background:#3a281f;color:#e0a47e}
   html[data-theme="dark"] select#edition{
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%239c988c'/></svg>");
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%239b9890'/></svg>");
   }
 
   main{max-width:var(--maxw);margin:0 auto;padding:0 24px 96px}
@@ -149,8 +149,8 @@
     display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
     font-weight:700;padding:1px 7px;border-radius:4px;vertical-align:middle;margin-left:8px;
   }
-  .label-fact{background:#eef0e8;color:#4a5a3a}
-  .label-op{background:#f3e7e7;color:#8a2b2b}
+  .label-fact{background:#efece4;color:#6b6a62}
+  .label-op{background:#f6e6da;color:#b0552c}
   blockquote{
     margin:22px 0;padding:2px 0 2px 18px;border-left:3px solid var(--rule);
     font-style:italic;color:var(--ink);
