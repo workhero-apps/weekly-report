@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Weekly — AI &amp; Tech, week of June 2–8, 2026</title>
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --ink:#1a1a1a;
+    --muted:#6b6b63;
+    --rule:#e3e0d6;
+    --link:#3a3a8c;
+    --accent:#8a2b2b;
+    --maxw:680px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
+  body{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    font-size:19px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header.site{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:34px 24px 0;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .masthead{display:flex;flex-direction:column;gap:6px}
+  .masthead .title{
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .controls{display:flex;align-items:center;gap:10px;margin-top:2px}
+  select#edition{
+    font-family:inherit;
+    font-size:14px;
+    color:var(--ink);
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:5px 26px 5px 9px;
+    cursor:pointer;
+    -webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%236b6b63'/></svg>");
+    background-repeat:no-repeat;
+    background-position:right 9px center;
+  }
+  .lang{
+    display:inline-flex;
+    border:1px solid var(--rule);
+    border-radius:6px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .lang button{
+    font-family:inherit;
+    font-size:13px;
+    letter-spacing:.04em;
+    border:0;
+    background:transparent;
+    color:var(--muted);
+    padding:5px 11px;
+    cursor:pointer;
+  }
+  .lang button.active{background:var(--ink);color:#fff}
+
+  main{max-width:var(--maxw);margin:0 auto;padding:0 24px 96px}
+
+  .rule{border:0;border-top:1px solid var(--rule);margin:26px 0 0}
+
+  article{padding-top:30px}
+  .eyebrow{
+    font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);
+    font-weight:600;margin:0 0 10px;
+  }
+  h1.headline{
+    font-size:34px;line-height:1.18;font-weight:700;margin:0 0 10px;letter-spacing:-.01em;
+  }
+  .dek{font-size:20px;line-height:1.5;color:var(--muted);font-style:italic;margin:0 0 18px}
+  .byline{font-size:14px;color:var(--muted);margin:0 0 6px}
+
+  .part{
+    margin:46px 0 0;padding:10px 0 0;border-top:2px solid var(--ink);
+  }
+  .part .kicker{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+    font-weight:700;margin:0 0 2px;
+  }
+  .part .part-name{
+    font-size:15px;letter-spacing:.02em;color:var(--muted);font-style:italic;margin:0 0 4px;
+  }
+
+  article h2{
+    font-size:21px;line-height:1.3;font-weight:700;margin:30px 0 6px;letter-spacing:-.005em;
+  }
+  article h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:.5ch}
+  article h3.op{
+    font-size:18px;line-height:1.35;font-weight:700;margin:26px 0 4px;
+  }
+  article h3.op span.who{color:var(--accent)}
+  article p{margin:0 0 18px}
+  article p.first:first-letter{
+    initial-letter:2;
+    -webkit-initial-letter:2;
+    font-weight:700;
+    margin-right:.06em;
+    color:var(--ink);
+  }
+  .label-fact,.label-op{
+    display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:700;padding:1px 7px;border-radius:4px;vertical-align:middle;margin-left:8px;
+  }
+  .label-fact{background:#eef0e8;color:#4a5a3a}
+  .label-op{background:#f3e7e7;color:#8a2b2b}
+  blockquote{
+    margin:22px 0;padding:2px 0 2px 18px;border-left:3px solid var(--rule);
+    font-style:italic;color:#33332e;
+  }
+  em.term{font-style:italic}
+  strong{font-weight:700}
+  .source-list{font-size:16px;line-height:1.55;color:#33332e}
+  .source-list h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px;font-weight:600}
+  .source-list ul{margin:0 0 10px;padding-left:20px}
+  .source-list li{margin:0 0 6px}
+  .footnote{font-size:14px;color:var(--muted);margin-top:30px}
+
+  @media (max-width:560px){
+    body{font-size:18px}
+    h1.headline{font-size:28px}
+    header.site{padding-top:24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="masthead">
+    <span class="title" data-i18n="pubtitle">The Weekly · AI &amp; Tech</span>
+    <div class="controls">
+      <select id="edition" aria-label="Select edition"></select>
+    </div>
+  </div>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="pt">PT</button>
+  </div>
+</header>
+
+<main>
+  <hr class="rule">
+  <article id="article"></article>
+</main>
+
+<script>
+/* ============================================================
+   EDITIONS DATA
+   Each edition keyed by ISO date. To add a new weekly report,
+   prepend a new object with the same shape. The Hermes cron job
+   (Sundays 13:00 Sydney) can prepend a new entry here.
+
+   HOUSE STYLE — three clearly separated parts, in this order:
+     Part I  — Features & tools   (FACTS ONLY: what shipped,
+               specs, numbers, benchmarks, prices. Objective.)
+     Part II — Economics          (FACTS ONLY: filings, raises,
+               stated revenue/valuation/compute figures.)
+     Part III — Opinion & ideas   (theses, frameworks, forecasts,
+               always attributed to who said them.)
+   Keep facts and opinion strictly separated.
+   ============================================================ */
+const EDITIONS = [
+{
+  date: "2026-06-08",
+  label: { en: "June 8, 2026", pt: "8 de junho de 2026" },
+  en: {
+    eyebrow: "Week of June 2–8, 2026",
+    headline: "The Week the Agents Left the Terminal",
+    dek: "Facts first, opinion last. What shipped and what it costs — stated as plainly as possible — then, in its own section, the theses and predictions, each attributed to the person making the claim.",
+    byline: "A weekly synthesis of six podcasts and four newsrooms. Reading time ~16 min.",
+    body: `
+<div class="part"><p class="kicker">Part I</p><p class="part-name">Features &amp; tools — what actually shipped<span class="label-fact">facts</span></p></div>
+
+<h2><span class="num">1.</span> OpenAI / Codex</h2>
+<p class="first">On <strong>June 2</strong>, OpenAI extended Codex beyond developers with <strong>six role-specific plugins</strong> — data analytics, creative production, sales, product design, public-equity investing, and investment banking — bundling <strong>62 apps and 110 skills</strong>, with connectors to Snowflake, Tableau, Figma, Canva, Salesforce, HubSpot, FactSet, S&amp;P and PitchBook. OpenAI states non-developers are now about <strong>20%</strong> of Codex users and growing roughly three times faster than developers. The same release added <strong>Sites</strong> (a preview for Business and Enterprise): Codex generates a hosted, shareable web app, dashboard or prototype from a prompt and can update it without further input; and it extended <strong>annotations</strong> — point-and-edit refinement — from code to documents, spreadsheets and slide decks. OpenAI also said Codex will be put <strong>into ChatGPT "in the next few weeks,"</strong> with agents running persistently in the cloud and reachable inside Excel, Slack and PowerPoint.</p>
+<p>Three more OpenAI items landed the same week. On <strong>June 4</strong>, it began rolling out <strong>"Dreaming,"</strong> a background memory system that synthesizes and corrects stored memories (for example, revising a future-tense trip to past tense once it has happened); OpenAI says it reduces the compute to serve a free user by roughly five times and adds a reviewable memory page, live first for Plus/Pro in the US. On <strong>June 3</strong>, it updated <strong>GPT-Rosalind</strong>, its life-sciences model line, reporting benchmark gains over GPT-5.5 — MedChemBench 27.5% vs 25.1%, GeneBench 21.6% vs 20.4%, LabWorkBench 63.2% vs 55.8% — plus a new LifeSciBench eval and two Codex plugins (Life Sciences Research, NGS Analysis), with Novo Nordisk as a research-preview partner. On <strong>June 1</strong>, OpenAI's frontier models and Codex reached general availability on <strong>AWS via Amazon Bedrock</strong> (Commercial and GovCloud), previewing a cyber-defense effort named Daybreak.</p>
+
+<h2><span class="num">2.</span> Cursor and the cheaper models</h2>
+<p><strong>Cursor Composer 2.5</strong> — released <strong>May 18</strong>, built on the open <strong>Kimi K2.5</strong> checkpoint, mixture-of-experts — ran Cursor's coding benchmark at about <strong>$0.50 per task versus ~$7 for Opus 4.7</strong> (14x cheaper). On third-party measures it was roughly tied with Opus 4.7 and GPT-5.5 on the Artificial Analysis Coding Index, beat GPT-5.5 on SWE-Bench Multilingual, and trailed GPT-5.5 on terminal-heavy tasks. In a single live demo on Tech With Tim it produced a working whiteboard app in about four minutes while Opus 4.7 took about fifteen and shipped a broken one. Cursor also launched <strong>Canvases</strong> (deployable internal sites) and public profiles at cursor.com/profile. Separately, on Riley Brown's show, Lindy founder Flo Crivello reported moving all of his product's traffic to <strong>DeepSeek V4</strong>, citing roughly <strong>$1.30 per million tokens</strong> for DeepSeek V4 Pro against <strong>$30</strong> for Opus 4.8 and <strong>$35</strong> for GPT-5.5.</p>
+
+<h2><span class="num">3.</span> Agent infrastructure and super-apps</h2>
+<p><strong>Hermes</strong> shipped a <strong>Desktop super-app</strong> (previously terminal-only), model-agnostic across Anthropic, OpenAI, DeepSeek, MiniMax and Kimi K2 — though without an in-app browser. <strong>Apple</strong> reportedly approved <strong>Poke.com</strong> as the first AI agent permitted to operate natively inside iMessage. <strong>Microsoft</strong> is reported to be building an OpenClaw companion app into Windows, a Mac-Mini-style "dev box" for running local models, and its first set of frontier models. At <strong>Temporal's Replay</strong> conference, Temporal announced <strong>serverless workers, standalone activities and workflow streams</strong>, and said OpenAI grew its Temporal usage <strong>more than 60x in a year</strong> (other named users: Mistral, Docker, Replit, Retool, Netflix). Two building blocks aimed at agents-as-buyers were highlighted: <strong>AgentMail</strong>, a YC-backed inbox API that gives an agent its own email account, and <strong>Stripe's</strong> new ability to give an agent a wallet with spend caps, approval rules and audit trails.</p>
+
+<h2><span class="num">4.</span> AI security</h2>
+<p>Palo Alto Networks CEO Nikesh Arora said an internal model called <strong>Mythos</strong> found vulnerabilities in Palo Alto's own code in <strong>six weeks that would normally take five to seven years</strong>, for "low millions" of tokens, and on a persistent-reasoning "ultra mode" could chain vulnerabilities into new attack paths; he stated its <strong>false-positive rate was 30%</strong>. <strong>Anthropic</strong> expanded <strong>Project Glasswing</strong> (built on its Claude Mythos preview) from about 50 to roughly <strong>150 organizations across 15+ countries</strong>, with the first cohort having found <strong>10,000+ high/critical-severity flaws</strong>. Anthropic also published a year-long analysis of <strong>832 banned accounts</strong> mapped to MITRE ATT&amp;CK: <strong>67.3% used AI to write malware</strong>, 6.5% for lateral movement, and the share of medium-or-higher-risk actors rose from <strong>33% to 56%</strong> over the period. And it launched a <strong>Services Track and Partner Hub</strong> for the Claude Partner Network, reporting 40,000+ firms applied and 10,000+ consultants certified.</p>
+
+<div class="part"><p class="kicker">Part II</p><p class="part-name">Economics — the stated numbers<span class="label-fact">facts</span></p></div>
+
+<h2><span class="num">5.</span> The filings and raises</h2>
+<p>On <strong>June 1</strong>, <strong>Anthropic confidentially submitted a draft Form S-1</strong> to the SEC for a proposed IPO of common stock; share count and price are not yet set. Days earlier, on May 28, Anthropic had announced a <strong>$65B Series H at a $965B post-money valuation</strong>. On All-In, Coatue's Thomas Laffont said <strong>SpaceX</strong> is expected to list within weeks, and OpenAI is also on the path to public markets.</p>
+
+<h2><span class="num">6.</span> Valuation and revenue figures presented</h2>
+<p>Laffont's <strong>"Magnificent 8"</strong> private index — SpaceX, Stripe, Anthropic, Databricks, Revolut, ByteDance, Anduril and one more — totals roughly <strong>$4 trillion</strong>. He stated that funding per unicorn is up about <strong>5x since 2021</strong>; that the 2021 cohort had 479 unicorns versus 73 in the prior cohort; and that fewer than <strong>20%</strong> of the 2021 cohort had exited or raised again twenty quarters in, versus about 80% for the earlier group. He presented OpenAI and Anthropic's <strong>combined revenue</strong> as having passed Workday, ServiceNow, Adobe and Salesforce, and as now larger than Google Cloud and Azure. He sized the broader AI ecosystem at about <strong>$140B of revenue today, ~$300B this year</strong>.</p>
+
+<h2><span class="num">7.</span> Compute economics</h2>
+<p>OpenAI CFO Sarah Friar gave these figures: <strong>one gigawatt</strong> of AI compute corresponds to about <strong>$10B/year of revenue</strong> and costs roughly <strong>$50B all-in</strong> to build; OpenAI raised <strong>$122B in March</strong>; ChatGPT has about <strong>900M weekly users</strong>; Codex reached about <strong>5M users</strong>; revenue is roughly <strong>50/50</strong> consumer/enterprise; and cost per token fell about <strong>97% from GPT-4 to GPT-5-mini</strong>. She said OpenAI expects to remain compute-constrained through <strong>2030–2032</strong>, and confirmed a <strong>Jony Ive-designed consumer device</strong> to be unveiled by the end of 2026 and shipped in early 2027.</p>
+
+<div class="part"><p class="kicker">Part III</p><p class="part-name">Opinion &amp; ideas — attributed theses<span class="label-op">opinion</span></p></div>
+<p>What follows are arguments and predictions, not facts — each tied to the person who made it.</p>
+
+<h3 class="op"><span class="who">Greg Isenberg</span> — agents are the next customer</h3>
+<p>His thesis is that the next customer is not a person but an agent, and every SaaS category will be rebuilt agent-native. "The human customer wants persuasion," he argues. "The agent customer wants structured capability, permission, and trust." In his telling the landing page becomes a capability manifest, the support doc becomes an executable endpoint, and the right move is to publish an <em class="term">/agents</em> entry point — schemas, OAuth, a sandbox, receipts — because "if an agent can't understand what you do and safely do something with you, you're basically invisible to them."</p>
+
+<h3 class="op"><span class="who">Benedict Evans</span> — models will probably become commodities</h3>
+<p>Evans argues that in infrastructure the builders rarely capture the value: telecom operators grew usage "one and a half to two thousand times" over fifteen years "and didn't make any money from it, because all the value moved up the stack." Chip makers, ISPs and carriers all missed it; Windows and iOS captured value only because they had network effects, "which models don't have." He is careful to frame it as a challenge, not a certainty — "explain to me why they won't be commodities" — and warns that "just because demand for tokens is infinite, that doesn't mean you can't get to a different price equilibrium," especially with Google's ad business giving it "a different attitude to pricing."</p>
+
+<h3 class="op"><span class="who">Nikesh Arora</span> — security favors the attacker; profit pools move to apps</h3>
+<p>Arora's interpretation of his own Mythos numbers is that AI security is now structurally offense-favored: a 30% false-positive rate is "great for attack, horrible for defense," because an attacker can be wrong most of the time and still win. He puts broad weaponization "three months away, if not already there" in open and Chinese models, notes that 89% of breaches still arrive via stolen credentials (making small offices the soft target), and argues the profit pools are migrating to the application layer — "analytical SaaS is over," infrastructure software is undervalued, and "Codex is running away," not OpenAI.</p>
+
+<h3 class="op"><span class="who">Tech With Tim</span> — the harness, not the model</h3>
+<p>Tim's framing of the cheap-model results is that raw frontier models still win on a bare API, but the gap is closed by the surrounding system: "the model is the engine, the harness is the car." On this view the durable advantage shifts from weights to context engineering, indexing and tool-looping.</p>
+
+<h3 class="op"><span class="who">Thomas Laffont</span> — forecasts and a coming price war</h3>
+<p>Beyond the figures he presented, Laffont's forward claims are opinion: that OpenAI and Anthropic's combined revenue will exceed AWS by year-end and all of Microsoft by 2028; that SpaceX, Anthropic and OpenAI will return "more cash than the prior ten years combined"; that a $100B "centicorn" has a counterintuitive ~31% chance of a further 10x; and that, with roughly $200B of cash between them, a price war between OpenAI and Anthropic would be "rational." He also argues memory is the under-appreciated scarcity: "If I want to design a chip I can go to TSMC. If I want to make memory, there is no TSMC."</p>
+
+<h3 class="op"><span class="who">Riley Brown</span> — "GitHub for AI coding," an agent store, and skepticism</h3>
+<p>Riley predicts Cursor is building "the GitHub for AI coding" (hence profiles and Canvases), that Apple's Poke approval foreshadows an iMessage "agent store," and that Codex Sites is aimed squarely at Lovable and Replit. He also flags — without alleging causation — that Anthropic's call for a coordinated pause on AI development lands "weirdly enough" the same week it filed to go public.</p>
+
+<h3 class="op"><span class="who">Theo Taba</span> — "everyone is a manager now"</h3>
+<p>Taba's thesis is that an AI-native company is one where "people manage agents, agents can read and write to the company, and the company gets smarter over time" — and that since AI now does the execution "everyone is a manager." His operational idea is the <em class="term">skill chain</em>: a macro-skill that fires sub-skills in sequence (build → write in the founder's voice → QA), fed by a mundane context layer of markdown folders on GitHub.</p>
+
+<h3 class="op"><span class="who">Dwarkesh Patel's economists</span> — the better AI gets, the smaller its share might be</h3>
+<p>Alex Imas and Phil Trammell make the week's most counterintuitive argument: even infinite, free AI-made goods need not save labor's ~60% share of output, because if the variety of automated goods keeps expanding while human-made goods stay finite, spending flows to the new varieties and labor's share can fall toward zero. They are skeptical of the viral "demand-collapse recession" ("the world in which there's a singularity and we don't want to invest more money is crazy") and counsel patience on the jobs panic, noting many 2026 layoffs look like ordinary cuts re-labeled as AI. Their darkest idea is that a few non-satiating "greedy optimizers" — they name Musk and Zuckerberg — could, by reinvesting everything, push the economy's capital share toward one; their most practical, that a middle-income country's best move may be to "buy the index of AGI," which works if AI behaves like electricity and fails if it behaves like social media.</p>
+`,
+    sources: `
+<h3>Videos · YouTube transcripts (last 7 days)</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=j--dqLJxrtE">Riley Brown — ChatGPT and Codex Are Merging</a></li>
+  <li><a href="https://www.youtube.com/watch?v=DbeFq_uoaRs">Riley Brown — Hermes Super-App &amp; DeepSeek V4 vs Opus 4.8</a></li>
+  <li><a href="https://www.youtube.com/watch?v=XOCVdPIhAHg">Tech With Tim — Cursor's Composer 2.5 vs Opus 4.7 vs GPT-5.5</a></li>
+  <li><a href="https://www.youtube.com/watch?v=nu5TH_lyjqg">Tech With Tim — Inside the Biggest AI Infrastructure Conference (Temporal)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=MlptIfpoLlw">Greg Isenberg — Agents as Customers: the Next $100B Market</a></li>
+  <li><a href="https://www.youtube.com/watch?v=tUeSxXHmE9w">Greg Isenberg — Codex Sites, Explained</a></li>
+  <li><a href="https://www.youtube.com/watch?v=LztPaNmcWGU">Greg Isenberg — Become AI-Native in 60 Minutes (Theo Taba)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=hObRMv6qCi0">All-In — Palo Alto Networks CEO: "AI Found 5 Years of Bugs in 6 Weeks"</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ktl8mNiWqMM">a16z — Why Coding Is the First Undeniable AI Use Case (Benedict Evans)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=UIoV8rG_25s">All-In — Thomas Laffont: The $4T AI IPO Wave Is Coming</a></li>
+  <li><a href="https://www.youtube.com/watch?v=TjrShuj_Zsg">All-In — OpenAI CFO Sarah Friar: IPO, AI Rivalries, New Device, Compute</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Jj-kBHzUohs">Dwarkesh Patel — The Economics of AGI (Alex Imas &amp; Phil Trammell)</a></li>
+</ul>
+<h3>Newsrooms</h3>
+<ul>
+  <li><a href="https://openai.com/index/codex-for-every-role-tool-workflow/">OpenAI — Codex for every role, tool, and workflow (Jun 2)</a></li>
+  <li><a href="https://openai.com/index/chatgpt-memory-dreaming/">OpenAI — "Dreaming": better memory for ChatGPT (Jun 4)</a></li>
+  <li><a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/">OpenAI — New capabilities for GPT-Rosalind, life sciences (Jun 3)</a></li>
+  <li><a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/">OpenAI — Frontier models &amp; Codex now on AWS (Jun 1)</a></li>
+  <li><a href="https://www.anthropic.com/news/expanding-project-glasswing">Anthropic — Expanding Project Glasswing to ~150 orgs (Jun 2)</a></li>
+  <li><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack">Anthropic — A year of AI-enabled cyber threats, mapped to MITRE ATT&amp;CK (Jun 3)</a></li>
+  <li><a href="https://www.anthropic.com/news/services-track-partner-hub">Anthropic — Services Track &amp; Partner Hub (Jun 3)</a></li>
+  <li><a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic — Confidential draft S-1 submitted to the SEC (Jun 1)</a></li>
+  <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google — May 2026 AI recap (Jun 5)</a></li>
+</ul>
+<p class="footnote">Note: hermes-ai.net/news had no new posts within this window (latest entries date to March–April 2026). Google's substantive launches this cycle (Gemini 3.5, Gemini Omni, Gemma 4) came at I/O on May 19, just outside the 7-day window.</p>
+`
+  },
+  pt: {
+    eyebrow: "Semana de 2 a 8 de junho de 2026",
+    headline: "A semana em que os agentes saíram do terminal",
+    dek: "Fatos primeiro, opinião por último. O que foi lançado e quanto custa — da forma mais objetiva possível — e, numa seção separada, as teses e previsões, cada uma atribuída a quem fez a afirmação.",
+    byline: "Síntese semanal de seis podcasts e quatro redações. Leitura ~16 min.",
+    body: `
+<div class="part"><p class="kicker">Parte I</p><p class="part-name">Ferramentas &amp; features — o que de fato foi lançado<span class="label-fact">fatos</span></p></div>
+
+<h2><span class="num">1.</span> OpenAI / Codex</h2>
+<p class="first">Em <strong>2 de junho</strong>, a OpenAI estendeu o Codex para além dos desenvolvedores com <strong>seis plugins por função</strong> — análise de dados, produção criativa, vendas, design de produto, investimento em ações públicas e banco de investimento — empacotando <strong>62 apps e 110 skills</strong>, com conectores para Snowflake, Tableau, Figma, Canva, Salesforce, HubSpot, FactSet, S&amp;P e PitchBook. A OpenAI afirma que não-desenvolvedores já são cerca de <strong>20%</strong> dos usuários do Codex e crescem aproximadamente três vezes mais rápido que os desenvolvedores. O mesmo lançamento adicionou o <strong>Sites</strong> (preview para Business e Enterprise): o Codex gera, a partir de um prompt, um app web hospedado e compartilhável, dashboard ou protótipo, e pode atualizá-lo sem novas instruções; e estendeu as <strong>annotations</strong> — refinamento por apontar-e-editar — de código para documentos, planilhas e apresentações. A OpenAI também disse que o Codex será colocado <strong>dentro do ChatGPT "nas próximas semanas,"</strong> com agentes rodando de forma persistente na nuvem e acessíveis dentro de Excel, Slack e PowerPoint.</p>
+<p>Outros três itens da OpenAI saíram na mesma semana. Em <strong>4 de junho</strong>, começou a liberar o <strong>"Dreaming,"</strong> um sistema de memória em segundo plano que sintetiza e corrige memórias armazenadas (por exemplo, revisando uma viagem do futuro para o passado depois que ela ocorreu); a OpenAI diz que reduz em cerca de cinco vezes o compute para servir um usuário grátis e adiciona uma página de memória revisável, primeiro para Plus/Pro nos EUA. Em <strong>3 de junho</strong>, atualizou o <strong>GPT-Rosalind</strong>, sua linha de modelos de ciências da vida, relatando ganhos sobre o GPT-5.5 — MedChemBench 27,5% vs 25,1%, GeneBench 21,6% vs 20,4%, LabWorkBench 63,2% vs 55,8% — além de um novo eval LifeSciBench e dois plugins de Codex (Life Sciences Research, NGS Analysis), com a Novo Nordisk como parceira de research preview. Em <strong>1º de junho</strong>, os modelos de fronteira e o Codex da OpenAI ficaram em disponibilidade geral na <strong>AWS via Amazon Bedrock</strong> (Commercial e GovCloud), com prévia de um esforço de ciberdefesa chamado Daybreak.</p>
+
+<h2><span class="num">2.</span> A Cursor e os modelos mais baratos</h2>
+<p>O <strong>Cursor Composer 2.5</strong> — lançado em <strong>18 de maio</strong>, construído sobre o checkpoint aberto <strong>Kimi K2.5</strong>, mixture-of-experts — rodou o benchmark de código da Cursor a cerca de <strong>US$ 0,50 por tarefa contra ~US$ 7 do Opus 4.7</strong> (14x mais barato). Em medições de terceiros ficou praticamente empatado com Opus 4.7 e GPT-5.5 no Artificial Analysis Coding Index, superou o GPT-5.5 no SWE-Bench Multilingual e ficou atrás do GPT-5.5 em tarefas de terminal. Numa única demo ao vivo no Tech With Tim, produziu um app de lousa funcional em cerca de quatro minutos, enquanto o Opus 4.7 levou cerca de quinze e entregou um app quebrado. A Cursor também lançou as <strong>Canvases</strong> (sites internos implantáveis) e perfis públicos em cursor.com/profile. À parte, no programa de Riley Brown, o fundador da Lindy, Flo Crivello, relatou ter movido todo o tráfego do produto para o <strong>DeepSeek V4</strong>, citando cerca de <strong>US$ 1,30 por milhão de tokens</strong> para o DeepSeek V4 Pro contra <strong>US$ 30</strong> do Opus 4.8 e <strong>US$ 35</strong> do GPT-5.5.</p>
+
+<h2><span class="num">3.</span> Infraestrutura de agentes e super-apps</h2>
+<p>A <strong>Hermes</strong> lançou um <strong>super-app Desktop</strong> (antes só terminal), agnóstico de modelo entre Anthropic, OpenAI, DeepSeek, MiniMax e Kimi K2 — embora sem navegador embutido. A <strong>Apple</strong> teria aprovado o <strong>Poke.com</strong> como o primeiro agente de IA autorizado a operar nativamente dentro do iMessage. A <strong>Microsoft</strong> estaria construindo um app companheiro do OpenClaw dentro do Windows, uma "dev box" estilo Mac Mini para rodar modelos locais e seu primeiro conjunto de modelos de fronteira. Na conferência <strong>Replay da Temporal</strong>, a Temporal anunciou <strong>serverless workers, standalone activities e workflow streams</strong>, e disse que a OpenAI cresceu o uso da Temporal <strong>mais de 60x em um ano</strong> (outros usuários citados: Mistral, Docker, Replit, Retool, Netflix). Dois blocos de construção voltados a agentes-compradores foram destacados: a <strong>AgentMail</strong>, uma API de inbox apoiada pela YC que dá ao agente sua própria conta de e-mail, e a nova capacidade da <strong>Stripe</strong> de dar a um agente uma carteira com tetos de gasto, regras de aprovação e trilha de auditoria.</p>
+
+<h2><span class="num">4.</span> Segurança de IA</h2>
+<p>O CEO da Palo Alto Networks, Nikesh Arora, disse que um modelo interno chamado <strong>Mythos</strong> achou vulnerabilidades no código da própria Palo Alto em <strong>seis semanas que normalmente levariam de cinco a sete anos</strong>, por "poucos milhões" de tokens, e que num "ultra mode" de raciocínio persistente conseguia encadear vulnerabilidades em novos caminhos de ataque; ele afirmou que a <strong>taxa de falsos positivos era de 30%</strong>. A <strong>Anthropic</strong> expandiu o <strong>Project Glasswing</strong> (construído sobre o preview do Claude Mythos) de cerca de 50 para aproximadamente <strong>150 organizações em mais de 15 países</strong>, com o primeiro grupo tendo encontrado <strong>mais de 10.000 falhas de severidade alta/crítica</strong>. A Anthropic também publicou uma análise de um ano sobre <strong>832 contas banidas</strong> mapeada no MITRE ATT&amp;CK: <strong>67,3% usaram IA para escrever malware</strong>, 6,5% para movimento lateral, e a fração de agentes de risco médio ou superior subiu de <strong>33% para 56%</strong> no período. E lançou um <strong>Services Track e Partner Hub</strong> para a Claude Partner Network, relatando 40.000+ empresas inscritas e 10.000+ consultores certificados.</p>
+
+<div class="part"><p class="kicker">Parte II</p><p class="part-name">Economia — os números declarados<span class="label-fact">fatos</span></p></div>
+
+<h2><span class="num">5.</span> Os protocolos e captações</h2>
+<p>Em <strong>1º de junho</strong>, a <strong>Anthropic submeteu de forma confidencial um rascunho de Form S-1</strong> à SEC para um IPO de ações ordinárias; quantidade de ações e preço ainda não definidos. Dias antes, em 28 de maio, a Anthropic havia anunciado uma <strong>Série H de US$ 65 bi a um valuation post-money de US$ 965 bi</strong>. No All-In, Thomas Laffont (Coatue) disse que a <strong>SpaceX</strong> deve abrir capital em semanas, e que a OpenAI também está a caminho do mercado público.</p>
+
+<h2><span class="num">6.</span> Números de valuation e receita apresentados</h2>
+<p>O índice privado <strong>"Magnificent 8"</strong> de Laffont — SpaceX, Stripe, Anthropic, Databricks, Revolut, ByteDance, Anduril e mais uma — totaliza cerca de <strong>US$ 4 trilhões</strong>. Ele afirmou que o financiamento por unicórnio subiu cerca de <strong>5x desde 2021</strong>; que a safra de 2021 tinha 479 unicórnios contra 73 na safra anterior; e que menos de <strong>20%</strong> da safra de 2021 haviam saído ou captado de novo após vinte trimestres, contra cerca de 80% do grupo anterior. Ele apresentou a <strong>receita combinada</strong> de OpenAI e Anthropic como tendo ultrapassado Workday, ServiceNow, Adobe e Salesforce, e como hoje maior que Google Cloud e Azure. Dimensionou o ecossistema de IA mais amplo em cerca de <strong>US$ 140 bi de receita hoje, ~US$ 300 bi neste ano</strong>.</p>
+
+<h2><span class="num">7.</span> Economia de compute</h2>
+<p>A CFO da OpenAI, Sarah Friar, deu estes números: <strong>um gigawatt</strong> de compute de IA corresponde a cerca de <strong>US$ 10 bi/ano de receita</strong> e custa aproximadamente <strong>US$ 50 bi no total</strong> para erguer; a OpenAI captou <strong>US$ 122 bi em março</strong>; o ChatGPT tem cerca de <strong>900 milhões de usuários semanais</strong>; o Codex chegou a cerca de <strong>5 milhões de usuários</strong>; a receita é mais ou menos <strong>50/50</strong> consumo/empresa; e o custo por token caiu cerca de <strong>97% do GPT-4 ao GPT-5-mini</strong>. Ela disse que a OpenAI espera seguir limitada por compute até <strong>2030–2032</strong>, e confirmou um <strong>dispositivo de consumo desenhado com Jony Ive</strong>, a ser revelado até o fim de 2026 e entregue no começo de 2027.</p>
+
+<div class="part"><p class="kicker">Parte III</p><p class="part-name">Opinião &amp; ideias — teses atribuídas<span class="label-op">opinião</span></p></div>
+<p>O que segue são argumentos e previsões, não fatos — cada um ligado a quem o fez.</p>
+
+<h3 class="op"><span class="who">Greg Isenberg</span> — os agentes são o próximo cliente</h3>
+<p>Sua tese é que o próximo cliente não é uma pessoa, mas um agente, e que toda categoria de SaaS será reconstruída em modo agent-native. "O cliente humano quer persuasão," argumenta. "O cliente-agente quer capacidade estruturada, permissão e confiança." Na visão dele, a landing page vira um manifesto de capacidades, a documentação de suporte vira um endpoint executável, e a jogada certa é publicar um ponto de entrada <em class="term">/agents</em> — schemas, OAuth, sandbox, recibos — porque "se um agente não consegue entender o que você faz e agir com você com segurança, você é basicamente invisível para ele".</p>
+
+<h3 class="op"><span class="who">Benedict Evans</span> — os modelos provavelmente virarão commodities</h3>
+<p>Evans argumenta que, em infraestrutura, quem constrói raramente captura o valor: operadoras de telecom multiplicaram o uso "mil e quinhentas a duas mil vezes" em quinze anos "e não ganharam dinheiro com isso, porque todo o valor migrou para cima na pilha". Fabricantes de chips, provedores e operadoras erraram a captura; Windows e iOS capturaram valor só porque tinham efeitos de rede, "que os modelos não têm". Ele tem o cuidado de enquadrar como desafio, não certeza — "me expliquem por que não virariam commodities" — e alerta que "só porque a demanda por tokens é infinita, isso não significa que não se possa chegar a um equilíbrio de preço diferente", sobretudo com o negócio de anúncios do Google lhe dando "uma atitude diferente em relação a preço".</p>
+
+<h3 class="op"><span class="who">Nikesh Arora</span> — a segurança favorece o atacante; o lucro migra para os apps</h3>
+<p>A interpretação de Arora sobre seus próprios números do Mythos é que a segurança de IA agora é estruturalmente favorável à ofensiva: uma taxa de 30% de falsos positivos é "ótima para atacar, péssima para defender", porque o atacante pode errar a maior parte do tempo e ainda vencer. Ele coloca o armamento amplo a "três meses de distância, se já não chegou" em modelos abertos e chineses, nota que 89% das invasões ainda chegam por credenciais roubadas (tornando os pequenos escritórios o alvo fácil), e defende que os lucros migram para a camada de aplicação — "o SaaS analítico acabou", o software de infraestrutura está subvalorizado, e "o Codex está disparando", não a OpenAI.</p>
+
+<h3 class="op"><span class="who">Tech With Tim</span> — o harness, não o modelo</h3>
+<p>O enquadramento de Tim para os resultados dos modelos baratos é que os modelos de fronteira ainda vencem numa API crua, mas a distância é fechada pelo sistema ao redor: "o modelo é o motor, o harness é o carro". Por essa visão, a vantagem durável migra dos pesos para a engenharia de contexto, a indexação e o loop de ferramentas.</p>
+
+<h3 class="op"><span class="who">Thomas Laffont</span> — previsões e uma guerra de preços à vista</h3>
+<p>Além dos números que apresentou, as afirmações prospectivas de Laffont são opinião: que a receita combinada de OpenAI e Anthropic superará a AWS até o fim do ano e toda a Microsoft até 2028; que SpaceX, Anthropic e OpenAI devolverão "mais caixa do que os dez anos anteriores somados"; que um "centicórnio" de US$ 100 bi tem uma chance contraintuitiva de ~31% de mais um 10x; e que, com cerca de US$ 200 bi em caixa entre as duas, uma guerra de preços entre OpenAI e Anthropic seria "racional". Ele também argumenta que a memória é a escassez subestimada: "Se eu quiser projetar um chip, posso ir à TSMC. Se eu quiser fazer memória, não existe uma TSMC."</p>
+
+<h3 class="op"><span class="who">Riley Brown</span> — "GitHub do código com IA", uma agent store e ceticismo</h3>
+<p>Riley prevê que a Cursor está construindo "o GitHub do código com IA" (daí os perfis e as Canvases), que a aprovação do Poke pela Apple prenuncia uma "agent store" no iMessage, e que o Codex Sites mira diretamente Lovable e Replit. Ele também aponta — sem alegar causalidade — que o pedido da Anthropic por uma pausa coordenada no desenvolvimento de IA cai "estranhamente" na mesma semana em que ela protocolou o IPO.</p>
+
+<h3 class="op"><span class="who">Theo Taba</span> — "todo mundo é gestor agora"</h3>
+<p>A tese de Taba é que uma empresa AI-native é aquela em que "pessoas gerenciam agentes, agentes conseguem ler e escrever na empresa, e a empresa fica mais inteligente com o tempo" — e que, como a IA agora faz a execução, "todo mundo é gestor". Sua ideia operacional é a <em class="term">skill chain</em>: uma macro-skill que dispara sub-skills em sequência (construir → escrever no tom do fundador → QA), alimentada por uma camada de contexto mundana de pastas de markdown no GitHub.</p>
+
+<h3 class="op"><span class="who">Os economistas de Dwarkesh Patel</span> — quanto melhor a IA, menor pode ser sua fatia</h3>
+<p>Alex Imas e Phil Trammell fazem o argumento mais contraintuitivo da semana: mesmo bens de IA infinitos e gratuitos podem não salvar a fatia de ~60% do trabalho na produção, porque se a variedade de bens automatizados segue se expandindo enquanto os bens humanos permanecem finitos, o gasto migra para as novas variedades e a fatia do trabalho pode cair rumo a zero. São céticos quanto ao viral cenário de "recessão por colapso de demanda" ("o mundo em que há uma singularidade e não queremos investir mais dinheiro é uma loucura") e aconselham paciência no pânico com empregos, notando que muitas demissões de 2026 parecem cortes comuns rotulados como IA. A ideia mais sombria deles é que uns poucos "otimizadores gananciosos" insaciáveis — citam Musk e Zuckerberg — poderiam, reinvestindo tudo, empurrar a fatia de capital da economia rumo a um; a mais prática, que a melhor jogada de um país de renda média pode ser "comprar o índice da AGI", o que funciona se a IA for como eletricidade e falha se for como mídia social.</p>
+`,
+    sources: `
+<h3>Vídeos · transcrições do YouTube (últimos 7 dias)</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=j--dqLJxrtE">Riley Brown — ChatGPT e Codex estão se fundindo</a></li>
+  <li><a href="https://www.youtube.com/watch?v=DbeFq_uoaRs">Riley Brown — Super-app Hermes &amp; DeepSeek V4 vs Opus 4.8</a></li>
+  <li><a href="https://www.youtube.com/watch?v=XOCVdPIhAHg">Tech With Tim — Composer 2.5 da Cursor vs Opus 4.7 vs GPT-5.5</a></li>
+  <li><a href="https://www.youtube.com/watch?v=nu5TH_lyjqg">Tech With Tim — Dentro da maior conferência de infraestrutura de IA (Temporal)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=MlptIfpoLlw">Greg Isenberg — Agentes como clientes: o próximo mercado de US$ 100B</a></li>
+  <li><a href="https://www.youtube.com/watch?v=tUeSxXHmE9w">Greg Isenberg — Codex Sites, explicado</a></li>
+  <li><a href="https://www.youtube.com/watch?v=LztPaNmcWGU">Greg Isenberg — Torne-se AI-native em 60 minutos (Theo Taba)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=hObRMv6qCi0">All-In — CEO da Palo Alto Networks: "IA achou 5 anos de bugs em 6 semanas"</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ktl8mNiWqMM">a16z — Por que código é o primeiro caso de uso inegável de IA (Benedict Evans)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=UIoV8rG_25s">All-In — Thomas Laffont: a onda de IPOs de IA de US$ 4T está chegando</a></li>
+  <li><a href="https://www.youtube.com/watch?v=TjrShuj_Zsg">All-In — Sarah Friar (CFO da OpenAI): IPO, rivalidades, novo device, compute</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Jj-kBHzUohs">Dwarkesh Patel — A economia da AGI (Alex Imas e Phil Trammell)</a></li>
+</ul>
+<h3>Redações</h3>
+<ul>
+  <li><a href="https://openai.com/index/codex-for-every-role-tool-workflow/">OpenAI — Codex para toda função, ferramenta e fluxo (2/jun)</a></li>
+  <li><a href="https://openai.com/index/chatgpt-memory-dreaming/">OpenAI — "Dreaming": memória melhor para o ChatGPT (4/jun)</a></li>
+  <li><a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/">OpenAI — Novas capacidades do GPT-Rosalind, ciências da vida (3/jun)</a></li>
+  <li><a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/">OpenAI — Modelos de fronteira e Codex agora na AWS (1/jun)</a></li>
+  <li><a href="https://www.anthropic.com/news/expanding-project-glasswing">Anthropic — Expansão do Project Glasswing para ~150 orgs (2/jun)</a></li>
+  <li><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack">Anthropic — Um ano de ciberameaças com IA, mapeado no MITRE ATT&amp;CK (3/jun)</a></li>
+  <li><a href="https://www.anthropic.com/news/services-track-partner-hub">Anthropic — Services Track &amp; Partner Hub (3/jun)</a></li>
+  <li><a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic — Rascunho confidencial de S-1 enviado à SEC (1/jun)</a></li>
+  <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google — Retrospectiva de IA de maio de 2026 (5/jun)</a></li>
+</ul>
+<p class="footnote">Nota: hermes-ai.net/news não teve publicações novas nesta janela (as entradas mais recentes são de março–abril de 2026). Os lançamentos relevantes do Google neste ciclo (Gemini 3.5, Gemini Omni, Gemma 4) saíram no I/O em 19 de maio, fora da janela de 7 dias.</p>
+`
+  }
+}
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const I18N = {
+  en: { pubtitle: "The Weekly · AI &amp; Tech", sources: "Sources" },
+  pt: { pubtitle: "The Weekly · IA &amp; Tech", sources: "Fontes" }
+};
+
+let state = { lang: "en", date: EDITIONS[0].date };
+
+function editionByDate(d){ return EDITIONS.find(e => e.date === d) || EDITIONS[0]; }
+
+function render(){
+  const ed = editionByDate(state.date);
+  const c = ed[state.lang];
+  document.documentElement.lang = state.lang;
+  document.querySelector('[data-i18n="pubtitle"]').innerHTML = I18N[state.lang].pubtitle;
+
+  const art = document.getElementById('article');
+  art.innerHTML =
+    '<p class="eyebrow">' + c.eyebrow + '</p>' +
+    '<h1 class="headline">' + c.headline + '</h1>' +
+    '<p class="dek">' + c.dek + '</p>' +
+    '<p class="byline">' + c.byline + '</p>' +
+    '<hr class="rule">' +
+    c.body +
+    '<hr class="rule">' +
+    '<div class="source-list"><h3 style="color:var(--accent);font-size:15px">' + I18N[state.lang].sources + '</h3>' + c.sources + '</div>';
+
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang === state.lang);
+  });
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+function buildDropdown(){
+  const sel = document.getElementById('edition');
+  sel.innerHTML = EDITIONS.map(e =>
+    '<option value="' + e.date + '">' + e.label[state.lang] + '</option>'
+  ).join('');
+  sel.value = state.date;
+}
+
+document.getElementById('edition').addEventListener('change', e=>{
+  state.date = e.target.value; render();
+});
+document.querySelectorAll('.lang button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    state.lang = b.dataset.lang;
+    buildDropdown();
+    render();
+  });
+});
+
+buildDropdown();
+render();
+</script>
+</body>
+</html>
