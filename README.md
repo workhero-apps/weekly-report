@@ -20,7 +20,7 @@ Every edition is trilingual (**English** default, **Spanish**, and **Portuguese*
 
 ## How it updates
 
-Each Sunday the Hermes agent researches the week, builds a new edition object, **prepends** it to `EDITIONS` in `index.html` (newest first, past editions untouched), validates, and commits as `Weekly report: <date>`. See `HERMES_AGENT_INSTRUCTIONS.md` for the full procedure.
+Each Sunday the Hermes agent researches the week, builds a new edition object, **prepends** it to `EDITIONS` in `index.html` (newest first, past editions untouched), validates, and commits as `AI weekly digest: <date>`. See `HERMES_AGENT_INSTRUCTIONS.md` for the full procedure.
 
 ## Sources
 

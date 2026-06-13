@@ -1,4 +1,4 @@
-# Hermes Agent — Weekly Report Instructions
+# Hermes Agent — AI Weekly Digest Instructions
 
 This document is the standing prompt/skill for the Hermes agent that generates **The Weekly · AI & Tech** report. Treat it as the source of truth. The agent's job, every Sunday, is to research the last 7 days, write a trilingual report following a strict house style, append it to `index.html`, and push to this repo.
 
@@ -143,22 +143,22 @@ Three `<h3>` lists — **Videos · YouTube transcripts (last 7 days)**, **Newsro
 1. Read `index.html`, locate `const EDITIONS = [`.
 2. Build the new edition object from your research.
 3. Insert it as the **first** array element (immediately after `[`).
-4. Validate: the JS must parse (`node --check` on the extracted `<script>`), both languages present, all source links resolve to real items, every number traces back to a transcript/article, opinions are attributed.
-5. Commit and push (see §6). Optionally also save a snapshot copy to `reports/weekly-report-YYYY-MM-DD.html`.
+4. Validate: the JS must parse (`node --check` on the extracted `<script>`), all three languages present, all source links resolve to real items, every number traces back to a transcript/article, opinions are attributed.
+5. Commit and push (see §6). Optionally also save a snapshot copy to `reports/ai-weekly-digest-YYYY-MM-DD.html`.
 
 ---
 
 ## 6. Git
 
 ```bash
-git clone git@github.com:workhero-apps/weekly-report.git
+git clone <ai-weekly-digest-repo-url>
 # …edit index.html (prepend new edition)…
 git add index.html reports/   # reports/ optional snapshot
-git commit -m "Weekly report: <window dates>"
+git commit -m "AI weekly digest: <window dates>"
 git push origin main
 ```
 
-Keep the commit message dated, e.g. `Weekly report: 2026-06-15` so the history reads as an archive.
+Keep the commit message dated, e.g. `AI weekly digest: 2026-06-15` so the history reads as an archive.
 
 ---
 
