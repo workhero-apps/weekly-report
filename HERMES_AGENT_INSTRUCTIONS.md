@@ -25,6 +25,9 @@ Pull the last 7 days of uploads from each, then fetch transcripts:
 - https://www.youtube.com/@TechWithTim
 - https://www.youtube.com/@rileybrownai
 - https://www.youtube.com/@DwarkeshPatel
+- https://www.youtube.com/@per_simmons
+- https://www.youtube.com/@FellyphCintra
+- https://www.youtube.com/@Fireship
 
 Process:
 1. Get the latest videos per channel (RSS/"latest videos" call is free).
@@ -104,7 +107,7 @@ Edition object shape (must match exactly):
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
     dek:      "…",                     // italic standfirst
-    byline:   "A weekly synthesis of six podcasts, four newsrooms, and selected X profiles. Reading time ~N min.",
+    byline:   "A weekly synthesis of nine YouTube channels, four newsrooms, and selected X profiles. Reading time ~N min.",
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
     sources:  "…HTML…"                 // <h3> Videos / Newsrooms / X profiles lists of <a> links + footnote
   },
