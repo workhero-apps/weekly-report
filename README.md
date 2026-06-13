@@ -10,11 +10,11 @@ Each edition synthesizes the past 7 days from nine YouTube channels (transcribed
 2. **Part II — Economics** *(facts)* — filings, raises, stated revenue/valuation/compute numbers.
 3. **Part III — Opinion & ideas** *(opinion)* — theses and forecasts, each attributed to who said it.
 
-Every edition is bilingual (**English** default, **Portuguese** toggle in the header) and selectable from a date dropdown.
+Every edition is trilingual (**English** default, **Spanish**, and **Portuguese** toggles in the header) and selectable from a date dropdown.
 
 ## Repo layout
 
-- **`index.html`** — the living report. A single self-contained page holding all editions in a JS `EDITIONS` array, with a date dropdown and EN/PT toggle. Open it in any browser; no build step.
+- **`index.html`** — the living report. A single self-contained page holding all editions in a JS `EDITIONS` array, with a date dropdown and EN/ES/PT toggle. Open it in any browser; no build step.
 - **`HERMES_AGENT_INSTRUCTIONS.md`** — the standing prompt the Hermes agent follows each week (sources, editorial rules, the three-part house style, the edition-object schema, and the git flow).
 - **`reports/`** *(optional)* — dated HTML snapshots, one per week, for archival.
 

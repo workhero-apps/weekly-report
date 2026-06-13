@@ -183,6 +183,7 @@
     <button id="theme" class="iconbtn" type="button" aria-label="Toggle dark mode" title="Dark mode"></button>
     <div class="lang" role="group" aria-label="Language">
       <button data-lang="en" class="active">EN</button>
+      <button data-lang="es">ES</button>
       <button data-lang="pt">PT</button>
     </div>
   </div>
@@ -424,6 +425,7 @@ const EDITIONS = [
    ============================================================ */
 const I18N = {
   en: { pubtitle: "The Weekly · AI &amp; Tech", sources: "Sources" },
+  es: { pubtitle: "The Weekly · IA &amp; Tech", sources: "Fuentes" },
   pt: { pubtitle: "The Weekly · IA &amp; Tech", sources: "Fontes" }
 };
 
@@ -433,7 +435,7 @@ function editionByDate(d){ return EDITIONS.find(e => e.date === d) || EDITIONS[0
 
 function render(){
   const ed = editionByDate(state.date);
-  const c = ed[state.lang];
+  const c = ed[state.lang] || ed.en;
   document.documentElement.lang = state.lang;
   document.querySelector('[data-i18n="pubtitle"]').innerHTML = I18N[state.lang].pubtitle;
 
@@ -457,7 +459,7 @@ function render(){
 function buildDropdown(){
   const sel = document.getElementById('edition');
   sel.innerHTML = EDITIONS.map(e =>
-    '<option value="' + e.date + '">' + e.label[state.lang] + '</option>'
+    '<option value="' + e.date + '">' + (e.label[state.lang] || e.label.en) + '</option>'
   ).join('');
   sel.value = state.date;
 }

@@ -1,6 +1,6 @@
 # Hermes Agent — Weekly Report Instructions
 
-This document is the standing prompt/skill for the Hermes agent that generates **The Weekly · AI & Tech** report. Treat it as the source of truth. The agent's job, every Sunday, is to research the last 7 days, write a bilingual report following a strict house style, append it to `index.html`, and push to this repo.
+This document is the standing prompt/skill for the Hermes agent that generates **The Weekly · AI & Tech** report. Treat it as the source of truth. The agent's job, every Sunday, is to research the last 7 days, write a trilingual report following a strict house style, append it to `index.html`, and push to this repo.
 
 ---
 
@@ -88,21 +88,21 @@ Theses, frameworks, predictions, interpretations. One short `<h3 class="op">` pe
 
 ## 4. Language
 
-- **Bilingual.** Write the full report in **English (default)** and **Portuguese**. The page header has an EN/PT toggle; both must be complete and equivalent.
+- **Trilingual.** Write the full report in **English (default)**, **Spanish**, and **Portuguese**. The page header has an EN/ES/PT toggle; all three versions must be complete and equivalent.
 - Keep numbers/specs identical across languages. Translate idiomatically, not literally.
 
 ---
 
 ## 5. Output — append an edition to `index.html`
 
-`index.html` is a single self-contained page holding ALL past editions in a JavaScript array called `EDITIONS`, with a date dropdown and the EN/PT toggle. **Each week you PREPEND a new object** to the front of `EDITIONS` (newest first) and commit. Do not rewrite past editions.
+`index.html` is a single self-contained page holding ALL past editions in a JavaScript array called `EDITIONS`, with a date dropdown and the EN/ES/PT toggle. **Each week you PREPEND a new object** to the front of `EDITIONS` (newest first) and commit. Do not rewrite past editions.
 
 Edition object shape (must match exactly):
 
 ```js
 {
   date: "YYYY-MM-DD",                  // the run/Sunday date, ISO
-  label: { en: "Month D, YYYY", pt: "D de mês de YYYY" },
+  label: { en: "Month D, YYYY", es: "D de mes de YYYY", pt: "D de mês de YYYY" },
   en: {
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
@@ -111,6 +111,7 @@ Edition object shape (must match exactly):
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
     sources:  "…HTML…"                 // <h3> Videos / Newsrooms / X profiles lists of <a> links + footnote
   },
+  es: { /* same keys, Spanish */ },
   pt: { /* same keys, Portuguese */ }
 }
 ```
@@ -167,6 +168,6 @@ Keep the commit message dated, e.g. `Weekly report: 2026-06-15` so the history r
 - [ ] No ads/sponsors/trivia; duplicates removed; each source's unique angle surfaced.
 - [ ] Part I & II are facts only; Part III is opinion only, each attributed.
 - [ ] Numbers, versions, prices, dates are specific and correct vs. sources.
-- [ ] EN and PT both complete and equivalent.
-- [ ] JS parses; dropdown + EN/PT toggle work; all links valid.
+- [ ] EN, ES, and PT are all complete and equivalent.
+- [ ] JS parses; dropdown + EN/ES/PT toggle works; all links valid.
 - [ ] New edition prepended (newest first); past editions untouched.
