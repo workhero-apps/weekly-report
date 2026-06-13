@@ -79,22 +79,24 @@
   }
   .lang{
     display:inline-flex;
-    border:1px solid var(--rule);
+    border:1px solid #1a1a1a;
     border-radius:6px;
     overflow:hidden;
-    background:var(--surface);
+    background:var(--accent-soft);
   }
   .lang button{
     font-family:inherit;
     font-size:13px;
     letter-spacing:.04em;
     border:0;
-    background:transparent;
-    color:var(--muted);
+    border-right:1px solid #1a1a1a;
+    background:var(--accent-soft);
+    color:#1a1a1a;
     padding:5px 11px;
     cursor:pointer;
   }
-  .lang button.active{background:var(--accent);color:var(--bg)}
+  .lang button:last-child{border-right:0}
+  .lang button.active{background:var(--accent-soft);color:#1a1a1a;font-weight:700;text-decoration:underline;text-underline-offset:3px}
   .header-right{display:flex;align-items:center;gap:10px}
   .iconbtn{
     display:inline-flex;align-items:center;justify-content:center;
@@ -104,8 +106,8 @@
     transition:color .15s ease,background-color .15s ease;
   }
   .iconbtn:hover{color:var(--ink)}
-  html[data-theme="dark"] .label-fact{background:#034f46;color:#ffffeb}
-  html[data-theme="dark"] .label-op{background:#f0d7ff;color:#1a1a1a}
+  html[data-theme="dark"] .label-fact{background:var(--accent-soft);color:#1a1a1a;border-color:#1a1a1a}
+  html[data-theme="dark"] .label-op{background:var(--accent-soft);color:#1a1a1a;border-color:#1a1a1a}
   html[data-theme="dark"] select#edition{
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23ffa946'/></svg>");
   }
@@ -154,10 +156,9 @@
   }
   .label-fact,.label-op{
     display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-    font-weight:700;padding:1px 7px;border-radius:4px;vertical-align:middle;margin-left:8px;
+    font-weight:700;padding:1px 7px;border:1px solid #1a1a1a;border-radius:4px;vertical-align:middle;margin-left:8px;
+    background:var(--accent-soft);color:#1a1a1a;
   }
-  .label-fact{background:#034f46;color:#ffffeb}
-  .label-op{background:#f0d7ff;color:#1a1a1a}
   blockquote{
     margin:22px 0;padding:2px 0 2px 18px;border-left:3px solid var(--rule);
     font-style:italic;color:var(--ink);
