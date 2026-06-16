@@ -52,6 +52,7 @@ Scrape posts and archive entries from these sites for the same 7-day window:
 - https://simple.ai/
 - https://www.superhuman.ai/archive
 - https://futuretools.io/news
+- https://tldr.tech/ai/archives
 
 Process:
 1. Fetch the listing/archive page first, using a JS-rendering browser tool if the normal fetch only returns a shell.
@@ -127,7 +128,7 @@ Edition object shape (must match exactly):
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
     dek:      "…",                     // italic standfirst
-    byline:   "A weekly synthesis of ten YouTube channels, four newsrooms, three weekly AI sites, and selected X profiles. Reading time ~N min.",
+    byline:   "A weekly synthesis of ten YouTube channels, four newsrooms, four weekly AI sites/newsletters, and selected X profiles. Reading time ~N min.",
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
     sources:  "…HTML…"                 // <h3> Videos / Newsrooms / Weekly AI sites / X profiles lists of <a> links + footnote
   },
