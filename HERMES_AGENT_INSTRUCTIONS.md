@@ -46,16 +46,35 @@ Process:
 2. Keep only items **dated within the window**. Open the individual article to get concrete details (model names, numbers, partners).
 3. If a source has nothing in the window, **say so explicitly** in the footnote (e.g. hermes-ai.net is a single-product release log and is often quiet). Do not fabricate filler.
 
+### Weekly AI sites / newsletters (scrape weekly posts)
+Scrape posts and archive entries from these sites for the same 7-day window:
+
+- https://simple.ai/
+- https://www.superhuman.ai/archive
+- https://futuretools.io/news
+
+Process:
+1. Fetch the listing/archive page first, using a JS-rendering browser tool if the normal fetch only returns a shell.
+2. Keep posts/items whose published date falls inside the 7-day window. For archive pages without obvious dates in the listing, open likely recent entries and verify dates on the individual page before including them.
+3. Open the original post/newsletter/news item and extract concrete shipped features, tools, model changes, pricing/availability, benchmarks, funding/economic facts, and attributed opinions. Do not summarize only the listing teaser.
+4. Deduplicate against YouTube, newsrooms, and X; cite the source URL in the Sources block.
+
 ### X / Twitter profiles (use twitterapi.io tooling)
 Pull the last 7 days of posts from each profile, then filter and cite the original tweet URLs:
 
 - https://x.com/levie
 - https://x.com/rileybrown
+- https://x.com/karpathy
+- https://x.com/ylecun
+- https://x.com/simonw
+- https://x.com/swyx
+- https://x.com/natolambert
+- https://x.com/rowancheung
 
 Process:
 1. Use the configured `TWITTERAPI_KEY` / twitterapi.io access already used by the X Daily Digest automation. The proven endpoint is `GET https://api.twitterapi.io/twitter/user/last_tweets?userName=<handle>` with header `x-api-key: $TWITTERAPI_KEY`.
 2. Filter returned `data.tweets` client-side to posts whose `createdAt` falls inside the 7-day window. Exclude replies unless they contain a substantive standalone idea; include quote tweets only if the author adds meaningful commentary.
-3. Treat these as **opinion/source commentary**, not newsroom facts, unless the tweet links to or announces a verifiable release. Attribute ideas in Part III to the author (e.g. Aaron Levie, Riley Brown) and cite the tweet URL in the Sources block.
+3. Treat these as **opinion/source commentary**, not newsroom facts, unless the tweet links to or announces a verifiable release. Attribute ideas in Part III to the author (e.g. Aaron Levie, Riley Brown, Andrej Karpathy, Yann LeCun, Simon Willison, swyx, Nathan Lambert, Rowan Cheung) and cite the tweet URL in the Sources block.
 4. If a profile has no relevant posts in the window, note that in the footnote. Do not backfill old tweets.
 
 ---
@@ -108,9 +127,9 @@ Edition object shape (must match exactly):
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
     dek:      "…",                     // italic standfirst
-    byline:   "A weekly synthesis of ten YouTube channels, four newsrooms, and selected X profiles. Reading time ~N min.",
+    byline:   "A weekly synthesis of ten YouTube channels, four newsrooms, three weekly AI sites, and selected X profiles. Reading time ~N min.",
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
-    sources:  "…HTML…"                 // <h3> Videos / Newsrooms / X profiles lists of <a> links + footnote
+    sources:  "…HTML…"                 // <h3> Videos / Newsrooms / Weekly AI sites / X profiles lists of <a> links + footnote
   },
   es: { /* same keys, Spanish */ },
   pt: { /* same keys, Portuguese */ }
@@ -138,7 +157,7 @@ Use these exact classes so the CSS styles render correctly:
 Labels: `<span class="label-fact">facts</span>` on Part I & II names; `<span class="label-op">opinion</span>` on Part III name. Use `<strong>` for key numbers, `<em class="term">` for coined terms. Escape `&` as `&amp;`.
 
 ### Sources block
-Three `<h3>` lists — **Videos · YouTube transcripts (last 7 days)**, **Newsrooms**, and **X / Twitter profiles** — each `<li><a href="URL">Title</a></li>`. End with a `<p class="footnote">` noting any source that was empty in the window.
+Four `<h3>` lists — **Videos · YouTube transcripts (last 7 days)**, **Newsrooms**, **Weekly AI sites / newsletters**, and **X / Twitter profiles** — each `<li><a href="URL">Title</a></li>`. End with a `<p class="footnote">` noting any source that was empty in the window.
 
 ### Steps each run
 1. Read `index.html`, locate `const EDITIONS = [`.
