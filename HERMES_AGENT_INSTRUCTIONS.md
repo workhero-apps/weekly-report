@@ -29,6 +29,7 @@ Pull the last 7 days of uploads from each, then fetch transcripts:
 - https://www.youtube.com/@FellyphCintra
 - https://www.youtube.com/@Fireship
 - https://www.youtube.com/@ycombinator
+- https://www.youtube.com/@Argonalyst
 
 Process:
 1. Get the latest videos per channel (RSS/"latest videos" call is free).
@@ -128,7 +129,7 @@ Edition object shape (must match exactly):
     eyebrow:  "Week of … , YYYY",
     headline: "…",                     // one strong line
     dek:      "…",                     // italic standfirst
-    byline:   "A weekly synthesis of ten YouTube channels, four newsrooms, four weekly AI sites/newsletters, and selected X profiles. Reading time ~N min.",
+    byline:   "A weekly synthesis of eleven YouTube channels, four newsrooms, four weekly AI sites/newsletters, and selected X profiles. Reading time ~N min.",
     body:     "…HTML…",                // the three parts (see §3 and template markup below)
     sources:  "…HTML…"                 // <h3> Videos / Newsrooms / Weekly AI sites / X profiles lists of <a> links + footnote
   },
