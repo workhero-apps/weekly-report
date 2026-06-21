@@ -84,7 +84,8 @@ Process:
 ## 2. Editorial rules (non-negotiable)
 
 - **Cut the noise.** No sponsor reads, ad segments, affiliate links, intros, banter, or trivia. Many sources repeat the same news — **dedupe**: state a fact once, and for each source surface only what is *unique* to it.
-- **Be specific and deep, never superficial.** Use real numbers, version names, prices, benchmark scores, dates, named people and companies.
+- **Be specific and deep, never superficial.** Each language version's body must be at least **3,000 words** unless Paulo explicitly approves a shorter emergency edition. Use real numbers, version names, prices, benchmark scores, dates, named people and companies.
+- **Use the monitored source breadth.** A normal edition should synthesize substantially from YouTube uploads/transcripts or source pointers, all active newsroom items, weekly AI sites/newsletters, and selected X profiles. Do not let the report collapse into only a few headlines when more monitored sources were available.
 - **Separate fact from opinion.** This is the core of the format (see §3).
 - **Attribute every opinion** to the person who said it ("X argues…", "Y predicts…"). Never present a thesis or forecast as fact.
 - **Quote sparingly but verbatim** when a line is striking; keep quotes accurate.
@@ -111,6 +112,7 @@ Theses, frameworks, predictions, interpretations. One short `<h3 class="op">` pe
 ## 4. Language
 
 - **Trilingual.** Write the full report in **English (default)**, **Spanish**, and **Portuguese**. The page header has an EN/ES/PT toggle; all three versions must be complete and equivalent.
+- **Translate the entire article, not only headings.** For Spanish and Portuguese, `headline`, `dek`, `byline`, every paragraph in `body`, opinion headings, part labels, and `sources` headings/footnotes must be idiomatic in that language. Only proper nouns, product names, model names, source titles, URLs, code/API names, and unavoidable quoted English phrases should remain in English.
 - Keep numbers/specs identical across languages. Translate idiomatically, not literally.
 
 ---

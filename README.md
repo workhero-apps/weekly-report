@@ -4,13 +4,13 @@ A weekly, Dan Wang–style essay report on AI & tech, generated automatically ev
 
 The agent researches original sources directly: YouTube transcripts, newsroom/article pages, weekly AI sites/newsletters, and selected X/Twitter profile feeds.
 
-Each edition synthesizes the past 7 days from eleven YouTube channels (transcribed), four newsrooms, four weekly AI sites/newsletters, and selected X/Twitter profiles, and is written in a strict **facts-first** format:
+Each edition synthesizes the past 7 days from eleven YouTube channels (transcribed when available), four newsrooms, four weekly AI sites/newsletters, and selected X/Twitter profiles. Every normal edition is a deep operating brief of **at least 3,000 words per language**, using the breadth of monitored sources rather than only a few headlines, and is written in a strict **facts-first** format:
 
 1. **Part I — Features & tools** *(facts)* — what actually shipped: products, specs, benchmarks, prices.
 2. **Part II — Economics** *(facts)* — filings, raises, stated revenue/valuation/compute numbers.
 3. **Part III — Opinion & ideas** *(opinion)* — theses and forecasts, each attributed to who said it.
 
-Every edition is trilingual (**English** default, **Spanish**, and **Portuguese** toggles in the header) and selectable from a date dropdown.
+Every edition is trilingual (**English** default, **Spanish**, and **Portuguese** toggles in the header). Spanish and Portuguese versions translate the full article body, not only titles/headings, while keeping product names, source titles, model names, URLs, and numbers intact.
 
 ## Repo layout
 
