@@ -6,9 +6,9 @@ The agent researches original sources directly: YouTube transcripts, newsroom/ar
 
 Each edition synthesizes the past 7 days from eleven YouTube channels (transcribed when available), four newsrooms, four weekly AI sites/newsletters, and selected X/Twitter profiles. Every normal edition is a deep operating brief of **at least 3,000 words per language**, using the breadth of monitored sources rather than only a few headlines, and is written in a strict **facts-first** format:
 
-1. **Part I — Features & tools** *(facts)* — what actually shipped: products, specs, benchmarks, prices.
-2. **Part II — Economics** *(facts)* — filings, raises, stated revenue/valuation/compute numbers.
-3. **Part III — Opinion & ideas** *(opinion)* — theses and forecasts, each attributed to who said it.
+1. **Part I — Features & tools** *(facts)* — about 5 distinct news items on what shipped, each with body text averaging ~900 characters.
+2. **Part II — Economics** *(facts)* — about 4 distinct economics items, each with body text averaging ~900 characters.
+3. **Part III — Opinion & ideas** *(opinion)* — at least 8 attributed opinions, each around ~900 characters, with a different source/person/publication for every opinion.
 
 Every edition is trilingual (**English** default, **Spanish**, and **Portuguese** toggles in the header). Spanish and Portuguese versions translate the full article body, not only titles/headings, while keeping product names, source titles, model names, URLs, and numbers intact.
 

@@ -97,13 +97,13 @@ Process:
 The report body is always divided into three labelled parts. Facts come first; opinion is quarantined at the end.
 
 **Part I — Features & tools** · label `[facts]`
-What actually shipped this week: products, features, releases, specs, benchmarks, prices, availability. Objective and detailed. Group by theme/company with numbered `<h2>` sections (e.g. OpenAI/Codex; Cursor & cheaper models; agent infra & super-apps; AI security).
+What actually shipped this week: products, features, releases, specs, benchmarks, prices, availability. Objective and detailed. Use **about 5 distinct news items/sections**, each with body text averaging **~900 characters** (not counting heading markup). Prefer one primary source per item and do not repeat the same primary source when enough monitored sources are available.
 
 **Part II — Economics** · label `[facts]`
-Hard economic facts only: filings, fundraises, stated revenue/valuation/compute figures, user counts. Numbers presented by a person should be framed as "X stated/presented" — but a *forecast* is opinion and belongs in Part III.
+Hard economic facts only: filings, fundraises, stated revenue/valuation/compute figures, user counts. Use **about 4 distinct economic news items/sections**, each with body text averaging **~900 characters**. Numbers presented by a person should be framed as "X stated/presented" — but a *forecast* is opinion and belongs in Part III.
 
 **Part III — Opinion & ideas** · label `[opinion]`
-Theses, frameworks, predictions, interpretations. One short `<h3 class="op">` per person, headed by their name (in `<span class="who">`). Open the part with a one-line reminder that these are arguments, not facts.
+Theses, frameworks, predictions, interpretations. Include **at least 8 opinions**, each around **~900 characters**, and each from a **different source/person/publication**. Do not repeat the same source in Part III. One `<h3 class="op">` per source/person, headed by their name/source (in `<span class="who">`). Open the part with a one-line reminder that these are arguments, not facts.
 
 > Rule of thumb: if it can be checked against a press release or a filing, it is a fact (Part I/II). If it is an interpretation, forecast, or value judgment, it is opinion (Part III).
 
