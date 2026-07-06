@@ -22,6 +22,8 @@ Every edition is trilingual (**English** default, **Spanish**, and **Portuguese*
 
 Each Sunday the Hermes agent researches the week, builds a new edition object, **prepends** it to `EDITIONS` in `index.html` (newest first, past editions untouched), validates, and commits as `AI weekly digest: <date>`. See `HERMES_AGENT_INSTRUCTIONS.md` for the full procedure.
 
+Runtime credentials are kept outside git in `/opt/data/ai-weekly-digest/.env` (mode `0600`). YouTube transcript collection uses `TRANSCRIPTAPI_KEY`/`YOUTUBE_TRANSCRIPT_API_KEY`; the `.env` file is ignored and must never be committed.
+
 ## Sources
 
 YouTube: @allin, @GregIsenberg, @a16z, @TechWithTim, @rileybrownai, @DwarkeshPatel, @per_simmons, @FellyphCintra, @Fireship, @ycombinator, @Argonalyst.

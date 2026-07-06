@@ -19,6 +19,8 @@ The agent must collect from the original sources directly. Do not rely on second
 ### YouTube channels (use the YouTube transcript tooling)
 Pull the last 7 days of uploads from each, then fetch transcripts:
 
+Credential/tooling: the cron workdir has `/opt/data/ai-weekly-digest/.env` with `TRANSCRIPTAPI_KEY` (or `YOUTUBE_TRANSCRIPT_API_KEY`). Load it before YouTube collection. Use TranscriptAPI `GET https://transcriptapi.com/api/v2/youtube/channel/latest?channel=<handle>` for latest uploads and `GET /youtube/transcript?video_url=<id>&format=text&include_timestamp=false&send_metadata=true` for transcript text. Keep the key out of logs and commits; `.env` is ignored.
+
 - https://www.youtube.com/@allin
 - https://www.youtube.com/@GregIsenberg
 - https://www.youtube.com/@a16z
