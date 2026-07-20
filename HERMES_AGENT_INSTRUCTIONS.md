@@ -114,11 +114,11 @@ The report body is always divided into three labelled parts. Facts come first; o
 **Part I — Features & tools** · label `[facts]`
 What actually shipped this week: products, features, releases, specs, benchmarks, prices, availability. Objective and detailed. Use **about 5 distinct news items/sections**, each with body text averaging **~900 characters** (not counting heading markup). Prefer one primary source per item and do not repeat the same primary source when enough monitored sources are available.
 
-**Part II — Economics & geopolitics** · label `[facts]`
-Hard economic and geopolitical facts only: filings, fundraises, stated revenue/valuation/compute figures, user counts, AI infrastructure and energy, industrial capacity, export controls, public procurement, data-center constraints, and cross-border model access. Use **about 4 distinct items**, each with body text averaging **~900 characters**. Numbers or policy positions presented by a person must be framed as "X stated/presented"; a forecast or value judgment belongs in Part III.
+**Part II — Economics & geopolitics** · label `[facts + attributed analysis]`
+Economics and geopolitics belong here: filings, fundraises, stated revenue/valuation/compute figures, user counts, AI infrastructure and energy, industrial capacity, export controls, public procurement, data-center constraints, cross-border model access, China/US competition, costs, market valuations and bubble risk. This section may also include **clearly attributed specialist analysis or opinion** when it interprets those topics. Use **about 4 distinct items**, each with body text averaging **~900 characters**. Frame a number, policy claim, forecast or judgment as the source’s statement/analysis; do not present it as settled fact.
 
-**Part III — Opinion & ideas** · label `[opinion]`
-Theses, frameworks, predictions, interpretations. Include **at least 8 opinions**, each around **~900 characters**, and each from a **different source/person/publication**. Do not repeat the same source in Part III. One `<h3 class="op">` per source/person, headed by their name/source (in `<span class="who">`). Open the part with a one-line reminder that these are arguments, not facts.
+**Part III — Product, engineering & work opinions** · label `[opinion]`
+Theses, frameworks and predictions about tools, engineering practice, agents, products and work. Include **at least 8 opinions**, each around **~900 characters**, and each from a **different source/person/publication**. Do not repeat the same source in Part III. Economic and geopolitical opinions belong in Part II, not here. One `<h3 class="op">` per source/person, headed by their name/source (in `<span class="who">`). Open the part with a one-line reminder that these are arguments, not facts.
 
 > Rule of thumb: if it can be checked against a press release or a filing, it is a fact (Part I/II). If it is an interpretation, forecast, or value judgment, it is opinion (Part III).
 
