@@ -32,6 +32,7 @@ Credential/tooling: the cron workdir has `/opt/data/ai-weekly-digest/.env` with 
 - https://www.youtube.com/@Fireship
 - https://www.youtube.com/@ycombinator
 - https://www.youtube.com/@Argonalyst
+- https://www.youtube.com/@LivePlayerswithSamoBurja
 
 Process:
 1. Get the latest videos per channel (RSS/"latest videos" call is free).
@@ -63,6 +64,10 @@ Process:
 3. Open the original post/newsletter/news item and extract concrete shipped features, tools, model changes, pricing/availability, benchmarks, funding/economic facts, and attributed opinions. Do not summarize only the listing teaser.
 4. Deduplicate against YouTube, newsrooms, and X; cite the source URL in the Sources block.
 
+### Supplemental economics & geopolitics source
+
+- https://substack.com/@michaeljburry — consult recent public notes/posts from **Cassandra Unchained** alongside @michaeljburry’s X posts. Respect paywalls: cite only text that is publicly accessible and never infer a post’s contents from its title or previews.
+
 ### X / Twitter profiles (use twitterapi.io tooling)
 Pull the last 7 days of posts from each profile, then filter and cite the original tweet URLs:
 
@@ -74,6 +79,11 @@ Pull the last 7 days of posts from each profile, then filter and cite the origin
 - https://x.com/swyx
 - https://x.com/natolambert
 - https://x.com/rowancheung
+- https://x.com/michaeljburry
+- https://x.com/DavidSacks
+- https://x.com/SamoBurja
+- https://x.com/bismarckanlys
+- https://x.com/palladiummag
 
 Process:
 1. Use the configured `TWITTERAPI_KEY` / twitterapi.io access already used by the X Daily Digest automation. The proven endpoint is `GET https://api.twitterapi.io/twitter/user/last_tweets?userName=<handle>` with header `x-api-key: $TWITTERAPI_KEY`.
@@ -101,8 +111,8 @@ The report body is always divided into three labelled parts. Facts come first; o
 **Part I — Features & tools** · label `[facts]`
 What actually shipped this week: products, features, releases, specs, benchmarks, prices, availability. Objective and detailed. Use **about 5 distinct news items/sections**, each with body text averaging **~900 characters** (not counting heading markup). Prefer one primary source per item and do not repeat the same primary source when enough monitored sources are available.
 
-**Part II — Economics** · label `[facts]`
-Hard economic facts only: filings, fundraises, stated revenue/valuation/compute figures, user counts. Use **about 4 distinct economic news items/sections**, each with body text averaging **~900 characters**. Numbers presented by a person should be framed as "X stated/presented" — but a *forecast* is opinion and belongs in Part III.
+**Part II — Economics & geopolitics** · label `[facts]`
+Hard economic and geopolitical facts only: filings, fundraises, stated revenue/valuation/compute figures, user counts, AI infrastructure and energy, industrial capacity, export controls, public procurement, data-center constraints, and cross-border model access. Use **about 4 distinct items**, each with body text averaging **~900 characters**. Numbers or policy positions presented by a person must be framed as "X stated/presented"; a forecast or value judgment belongs in Part III.
 
 **Part III — Opinion & ideas** · label `[opinion]`
 Theses, frameworks, predictions, interpretations. Include **at least 8 opinions**, each around **~900 characters**, and each from a **different source/person/publication**. Do not repeat the same source in Part III. One `<h3 class="op">` per source/person, headed by their name/source (in `<span class="who">`). Open the part with a one-line reminder that these are arguments, not facts.
