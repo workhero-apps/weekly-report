@@ -44,6 +44,9 @@ Process:
 - https://www.anthropic.com/news
 - https://hermes-ai.net/news/
 - https://blog.google/innovation-and-ai/technology/ai/
+- https://www.kimi.com/blog/ — Moonshot AI / Kimi Research
+- https://www.zhipuai.cn/en/research — Zhipu AI Research
+- https://deepseek.ai/blog — DeepSeek Blog
 
 Process:
 1. Try a normal web fetch first. If it returns an empty shell / "enable JavaScript" / nav-only boilerplate, the page is client-rendered — **re-fetch with a JS-rendering browser tool** (headless browser / browser skill) and read the rendered text.
