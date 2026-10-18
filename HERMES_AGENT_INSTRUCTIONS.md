@@ -179,10 +179,10 @@ Labels: `<span class="label-fact">facts</span>` on Part I & II names; `<span cla
 Four `<h3>` lists — **Videos · YouTube transcripts (last 7 days)**, **Newsrooms**, **Weekly AI sites / newsletters**, and **X / Twitter profiles** — each `<li><a href="URL">Title</a></li>`. End with a `<p class="footnote">` noting any source that was empty in the window.
 
 ### Steps each run
-1. Read `index.html`, locate `const EDITIONS = [`.
+1. Read `index.html`, locate `const EDITIONS = [`, and check whether an object already has the run date. A rerun for an existing date must **not** append or prepend another edition; keep the existing canonical (first) record unless Paulo explicitly requests an update.
 2. Build the new edition object from your research.
-3. Insert it as the **first** array element (immediately after `[`).
-4. Validate: the JS must parse (`node --check` on the extracted `<script>`), all three languages present, all source links resolve to real items, every number traces back to a transcript/article, opinions are attributed.
+3. Only when the run date is absent, insert it as the **first** array element (immediately after `[`).
+4. Validate: the JS must parse (`node --check` on the extracted `<script>`), every edition date is unique, all three languages are present, all source links resolve to real items, every number traces back to a transcript/article, opinions are attributed.
 5. Commit and push (see §6). Optionally also save a snapshot copy to `reports/ai-weekly-digest-YYYY-MM-DD.html`.
 
 ---
